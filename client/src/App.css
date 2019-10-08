@@ -1,6 +1,107 @@
 .App {
   text-align: center;
   background-color: rgb(29, 29, 47);
+  padding-top: 1px;
+  padding-bottom: 1px;
+  box-sizing: border-box;
+  background-image: repeating-linear-gradient(
+    25deg,
+    rgb(30, 30, 54),
+    rgb(44, 68, 115),
+    rgb(84, 44, 115),
+    rgb(173, 20, 170));
+    /* 25deg, 
+    rgb(30, 30, 54) 0%, 
+    rgb(246, 97, 11) 20%, 
+    rgb(14, 180, 195) 40%, 
+    yellow 60%, 
+    rgb(229, 55, 226) 80%, 
+    rgb(30, 30, 54) 100%); */
+  display: flex;
+}
+
+.navbutton {
+  font-family: 'Share Tech Mono', monospace;
+  font-weight: bold;
+  background-color: lightgoldenrodyellow;
+  border-radius: 20px;
+}
+
+.navbutton:hover {
+  background-color: black;
+  color: lightgoldenrodyellow;
+  transform: scale(1, 1.25);
+  
+}
+
+#nocontent {
+  height: 60vh;
+  width: 40vw;
+  padding-top: 30vh;
+  opacity: 0.8;
+}
+
+.flexcontainer {
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  align-content: center;
+  justify-content: stretch;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.all {
+  flex: 2 0 0;
+  overflow-y: auto;
+  /* font-family: 'Libre Barcode 39 Extended Text', cursive; */
+  font-family: 'Share Tech Mono', monospace;
+  vertical-align: top;
+  padding-top: 15vh;
+}
+
+#allinfo {
+  vertical-align: top;
+}
+
+.details:hover {
+  color: lightgoldenrodyellow;
+  transform: scale(1, 1.25);
+}
+
+.details {
+  flex: 1 0 0;
+  align-items: center;
+}
+
+#detailtitle {
+  font-family: 'Megrim', cursive;
+}
+
+.charexplanation {
+  color: lightgoldenrodyellow;
+  font-family: 'Megrim', cursive;
+  font-weight: bold;
+  padding-top: 31vh;
+  width: 40vw;
+}
+
+.buttonsdiv {
+  position: fixed;
+  align-content: center;
+  /* left: 38vw;
+  right: 38vw; */
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100vw;
+}
+
+.charbox {
+  /* border: 2px solid white; */
+  width: 250px;
+  height: 200px;
+  display: inline-block;
+  margin-top: 10vh;
 }
 
 .charpic {
@@ -11,7 +112,52 @@
   border-style: outset;
 }
 
-.picdiv {
+.charpic:hover {
+  transform: perspective(23rem) rotateX(-15deg) rotateY(30deg);
+}
+
+.details {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+#one:hover {
+  color: rgb(122, 241, 11);
+}
+
+#two:hover {
+  color: rgb(25, 117, 25);
+}
+
+#three:hover {
+  color: rgb(238, 255, 0);
+}
+
+#four:hover {
+  color: rgb(0, 255, 153);
+}
+
+#five:hover {
+  color: rgb(147, 4, 147);
+}
+
+#six:hover {
+  color: rgb(255, 0, 102);
+}
+
+#seven:hover {
+  color: rgb(0, 213, 255);
+}
+
+#eight:hover {
+  color: rgb(0, 255, 174);
+}
+
+#nine:hover {
+  color: yellow;
+}
+
+/* .picdiv {
   display: flex;
 	align-content: center;
 	align-items: center;
@@ -25,9 +171,9 @@
 	box-shadow: 15px 15px 50px rgba(0,0,0,0.2);
 	animation: morphing 10s infinite;
 	overflow: hidden;
-}
+} */
 
-@keyframes morphing {
+/* @keyframes morphing {
   0% {
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     box-shadow: 15px 15px 50px rgba(0,0,0,0.2);
@@ -42,5 +188,5 @@
   75% {
     border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;		
   }
-}
+} */
 
